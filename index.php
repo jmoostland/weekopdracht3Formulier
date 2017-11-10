@@ -105,7 +105,7 @@
                 <br>
 
                 <tr><td></td>
-                    <td><br><textarea name="question" rows="5" cols="30"></textarea></td>
+                    <td><br><textarea name="question" rows="5" cols="30">What are the questions that made the biggest difference in your life?</textarea></td>
                 </tr>        
                 <tr>
                     <td> 
