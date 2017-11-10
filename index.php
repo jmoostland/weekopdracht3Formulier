@@ -67,7 +67,7 @@
     <body>
 
 
-
+        <form action="testfile.php" method="post">
             <table cellspacing="2" cellpadding="2" border="0">
 
                 <div id="demo"><h1>Join us</h1></div>
@@ -100,12 +100,12 @@
                         </select></td></tr>
                 <tr>
                     <td>What is your favorite city?</td>
-                    <td> <input type="text" name="pet" size="35"><br></td>
+                    <td> <input type="text" name="city" size="35"><br></td>
                 </tr>
                 <br>
 
                 <tr><td></td>
-                    <td><br><textarea name="bericht" value=question rows="5" cols="30"></textarea></td>
+                    <td><br><textarea name="question" rows="5" cols="30"></textarea></td>
                 </tr>        
                 <tr>
                     <td> 
@@ -120,18 +120,6 @@
 
 </html>
 
-<?php $fh = fopen("testfile.txt", 'w') or die("Failed to create file");
-
-$text = <<<_END
-        Line 1
-        Line 2
-        Line 3
-_END;
-
-fwrite($fh,$text) or die ("Could not write the file");
-fclose($fh);
-echo "File 'testfile.txt' written successfully";
-?>
 
 
 
