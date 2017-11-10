@@ -3,16 +3,16 @@
     <head>
         <script>
 
-
-            function loadXMLDoc() {
-                var template = document.getElementById("pizza").value;
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("demo").innerHTML =
-                                this.responseText;
-                    }
-//                    function myFunction() {
+//
+//            function loadXMLDoc() {                                           //alleen nodig om het op dezelfde pagina te laten zien, werkte prima
+//                var template = document.getElementById("pizza").value;
+//                var xhttp = new XMLHttpRequest();
+//                xhttp.onreadystatechange = function () {
+//                    if (this.readyState == 4 && this.status == 200) {
+//                        document.getElementById("demo").innerHTML =
+//                                this.responseText;
+//                    }
+//                    function myFunction() {                                       //poging om op dezelfde pagina een afbeelding te laten verschijnen
 //                        var x = document.getElementById("myFile").autofocus;
 //                       var xhttp = new XMLHttpRequest();
 //                       xhttp.onreadystatechange = function () {
@@ -23,11 +23,11 @@
 ////                        
 //////                        document.getElementById("profiel").innerHTML;
 //                    }
-                };
-
-                xhttp.open("GET", "http://localhost/formulierWeekopdracht/index.php?pizza" + template, true);
-                xhttp.send();
-            }
+//                };
+//
+//                xhttp.open("GET", "http://localhost/formulierWeekopdracht/index.php?pizza" + template, true); //alleen nodig om het op dezelfde webpagina te laten zien
+//                xhttp.send();
+//            }
 
 
 
@@ -67,7 +67,7 @@
     <body>
 
 
-        <form action="testfile.php" method="post">
+        <form action="testfile.php" method="post" enctype="multipart/form-data">
             <table cellspacing="2" cellpadding="2" border="0">
 
                 <div id="demo"><h1>Join us</h1></div>
@@ -109,7 +109,7 @@
                 </tr>        
                 <tr>
                     <td> 
-                    <td><input width="200px" type="image" src="fox.png" id="pizza" onclick="loadXMLDoc()"></td>
+                    <td><input width="200px" type="image" src="fox.png" \*id="pizza" onclick="loadXMLDoc()"*\></td>
                 </tr>
             </table>
         </form>

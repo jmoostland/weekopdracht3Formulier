@@ -11,7 +11,7 @@ echo "Email:".$_POST ["email"]."<br>";
 echo "City:".$_POST ["city"]."<br>";
 echo "Question:".$_POST ["question"]."<br>";
 
-
+$gender = $_POST["gender"];
 $name = $_POST["name"];
 $email = $_POST["email"];
 $city = $_POST["city"];
@@ -27,11 +27,16 @@ $question = $_POST["question"];
 //save($question, $var1);
 
 $myfile= fopen("testfile.txt", "w") or die ("Unable to open file.");
+fwrite($myfile, $gender);
+fwrite($myfile, "\n");
 fwrite($myfile, $name);
+fwrite($myfile, "\n");
 fwrite($myfile,$email);
+fwrite($myfile, "\n");
 fwrite($myfile, $city);
+fwrite($myfile, "\n");
 fwrite($myfile, $question);
-fclose($myfile);
+
 
 
 //function save($var1, $var2) {
