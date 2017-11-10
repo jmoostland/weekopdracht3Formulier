@@ -60,6 +60,11 @@
                 font-weight: bold;
             }
 
+            input{
+                font-family:Georgia;
+                color:#000;
+            }
+
 
         </style>
 
@@ -67,16 +72,26 @@
     <body>
 
 
-        <form action="testfile.php" method="post" enctype="multipart/form-data">
+        <form action="testfile.php" method="post">
             <table cellspacing="2" cellpadding="2" border="0">
 
                 <div id="demo"><h1>Join us</h1></div>
-    <!--            <tr>
-                    <td><form action="#" method="post" enctype="multipart/form-data">
+<!--                <tr>
+                    <td><form action='index.php' method='post' enctype='multipart/form-data'>      poging bezoeker profielfoto
                             <label for="userfile">Profile picture:</label></td>
-                    <td><input type="file" name="userfile" id="myFile" />
-                        <input type="submit" id="profiel"/></form></td>
-                </tr> -->
+                    <td><input type="file" name="userfile"/>                                 weggehaald id="myFile"
+                        <input type="submit" value='upload'/></form></td>                     weggehaald id="profiel"
+                </tr> 
+                <?php
+                if ($_FILES) {
+                    $name = $_FILES['userfile']['name'];
+                    move_uploaded_file($_FILES ['userfile']['tmp_name'], $name);
+                    echo "'$name'<br><img src='$name'";
+                }
+                echo "</body><html>";
+                ?>-->
+
+
                 <tr>
                     <td>Gender</td>
                     <td><label><input type="radio" name="gender" value="men">men</label>
@@ -85,11 +100,18 @@
                 </tr>
                 <tr>
                     <td>Name</td>
-                    <td> <input type="text" name="name" size="35"><br></td>
-                </tr><tr>
+                    <td> <input type="text" name="name" size="35" placeholder="First and last name"><br></td>
+                </tr>
+                <tr>
+                    <td>Birthday</td>
+                    <td> <input type="date" name="bday" size="35"><br>
+                    </td>
+                </tr>
+                <tr>
                     <td>Email</td>
-                    <td><input type="text" name="email" size="35"><br></td>
-                </tr><tr>
+                    <td><input type="text" name="email" size="35"placeholder="Email"><br></td>
+                </tr>
+                <tr>
                     <td>What is the color of your eyes?</td>
                     <td>
                         <select name="eyes">
@@ -99,13 +121,17 @@
                             <option value="grey">Grey</option>
                         </select></td></tr>
                 <tr>
+                    <td>What is your favorite color?</td>
+                    <td><input type="color" name="favcolor" value="#06f955"><br></td>
+                </tr>
+                <tr>
                     <td>What is your favorite city?</td>
-                    <td> <input type="text" name="city" size="35"><br></td>
+                    <td> <input type="text" name="city" size="35"placeholder="Favorite city"><br></td>
                 </tr>
                 <br>
 
                 <tr><td></td>
-                    <td><br><textarea name="question" rows="5" cols="30">What are the questions that made the biggest difference in your life?</textarea></td>
+                    <td><br><textarea name="question" rows="5" cols="37" wrap="hard">What are the questions that made the biggest difference in your life?</textarea></td>
                 </tr>        
                 <tr>
                     <td> 

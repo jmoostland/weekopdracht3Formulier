@@ -7,45 +7,39 @@
 //echo"</pre>";
 echo "Gender:".$_POST ["gender"]."<br>";
 echo "Name:".$_POST ["name"]."<br>";
+echo "Birthday:".$_POST ["bday"]."<br>";
 echo "Email:".$_POST ["email"]."<br>";
+echo "Eyes:".$_POST ["eyes"]."<br>";
+echo "Favcolor:".$_POST ["favcolor"]."<br>";
 echo "City:".$_POST ["city"]."<br>";
 echo "Question:".$_POST ["question"]."<br>";
 
 $gender = $_POST["gender"];
 $name = $_POST["name"];
+$bday = $_POST["bday"];
 $email = $_POST["email"];
+$eyes = $_POST["eyes"];
+$favcolor = $_POST["favcolor"];
 $city = $_POST["city"];
 $question = $_POST["question"];
-
-//$myfile = "Name: " . $_POST['name'];
-//save($name, $myfile);
-//$var1 = "Email: " . $_POST['email'];
-//save($email, $var1);
-//$var1 = "City: " . $_POST['city'];
-//save($city, $var1);
-//$var1 = "Question: " . $_POST['question'];
-//save($question, $var1);
 
 $myfile= fopen("testfile.txt", "w") or die ("Unable to open file.");
 fwrite($myfile, $gender);
 fwrite($myfile, "\n");
 fwrite($myfile, $name);
 fwrite($myfile, "\n");
+fwrite($myfile, $bday);
+fwrite($myfile, "\n");
 fwrite($myfile,$email);
+fwrite($myfile, "\n");
+fwrite($myfile,$eyes);
+fwrite($myfile, "\n");
+fwrite($myfile,$favcolor);
 fwrite($myfile, "\n");
 fwrite($myfile, $city);
 fwrite($myfile, "\n");
 fwrite($myfile, $question);
 
-
-
-//function save($var1, $var2) {
-//    $fh = fopen($var1 . "testfile.txt", 'a+');
-//    fwrite($fh, "\n");
-//    fwrite($fh, $var2);
-//    fwrite($fh, ";");
-//    fclose($fh);
-//}
 
 //fwrite($fh, "w") or die("Could not write the file");
 //fclose($fh);
