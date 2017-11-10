@@ -5,14 +5,14 @@
 //echo "<pre>";
 //echo file_get_contents("index.php");
 //echo"</pre>";
-echo "Gender:".$_POST ["gender"]."<br>";
-echo "Name:".$_POST ["name"]."<br>";
-echo "Birthday:".$_POST ["bday"]."<br>";
-echo "Email:".$_POST ["email"]."<br>";
-echo "Eyes:".$_POST ["eyes"]."<br>";
-echo "Favcolor:".$_POST ["favcolor"]."<br>";
-echo "City:".$_POST ["city"]."<br>";
-echo "Question:".$_POST ["question"]."<br>";
+echo "Gender: ".$_POST ["gender"]."<br>";
+echo "Name: ".$_POST ["name"]."<br>";
+echo "Birthday: ".$_POST ["bday"]."<br>";
+echo "Email: ".$_POST ["email"]."<br>";
+echo "Eyes: ".$_POST ["eyes"]."<br>";
+echo "Favcolor: ".$_POST ["favcolor"]."<br>";
+echo "City: ".$_POST ["city"]."<br>";
+echo "Question: ".$_POST ["question"]."<br>";
 
 $gender = $_POST["gender"];
 $name = $_POST["name"];

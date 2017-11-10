@@ -57,7 +57,7 @@
             select{
                 font-family:Georgia;
                 font-size: 15px;
-                font-weight: bold;
+                /*font-weight: bold;*/
             }
 
             input{
@@ -94,8 +94,8 @@
 
                 <tr>
                     <td>Gender</td>
-                    <td><label><input type="radio" name="gender" value="men">men</label>
-                        <label><input type="radio" name="gender" value="women">women</label>
+                    <td><label><input type="radio" name="gender" value="men" required>men</label>
+                        <label><input type="radio" name="gender" value="women" required>women</label>
                     </td>
                 </tr>
                 <tr>
@@ -104,7 +104,7 @@
                 </tr>
                 <tr>
                     <td>Birthday</td>
-                    <td> <input type="date" name="bday" size="35"><br>
+                    <td> <input type="date" name="bday" size="35" required><br>
                     </td>
                 </tr>
                 <tr>
