@@ -5,6 +5,7 @@
 //echo "<pre>";
 //echo file_get_contents("index.php");
 //echo"</pre>";
+
 echo "Gender: ".$_POST ["gender"]."<br>";
 echo "Name: ".$_POST ["name"]."<br>";
 echo "Birthday: ".$_POST ["bday"]."<br>";
@@ -23,23 +24,29 @@ $favcolor = $_POST["favcolor"];
 $city = $_POST["city"];
 $question = $_POST["question"];
 
+$gegevens=array($gender,$name,$bday,$email,$eyes,$favcolor,$city,$question);
 $myfile= fopen("testfile.txt", "w") or die ("Unable to open file.");
-fwrite($myfile, $gender);
-fwrite($myfile, "\n");
-fwrite($myfile, $name);
-fwrite($myfile, "\n");
-fwrite($myfile, $bday);
-fwrite($myfile, "\n");
-fwrite($myfile,$email);
-fwrite($myfile, "\n");
-fwrite($myfile,$eyes);
-fwrite($myfile, "\n");
-fwrite($myfile,$favcolor);
-fwrite($myfile, "\n");
-fwrite($myfile, $city);
-fwrite($myfile, "\n");
-fwrite($myfile, $question);
+foreach ($gegevens as $key => $value) {
+fwrite($myfile,$value."\n");
 
+}
+
+//fwrite($myfile, $gender); //in een array plaatsen
+//fwrite($myfile, "\n");
+//fwrite($myfile, $name);
+//fwrite($myfile, "\n");
+//fwrite($myfile, $bday);
+//fwrite($myfile, "\n");
+//fwrite($myfile,$email);
+//fwrite($myfile, "\n");
+//fwrite($myfile,$eyes);
+//fwrite($myfile, "\n");
+//fwrite($myfile,$favcolor);
+//fwrite($myfile, "\n");
+//fwrite($myfile, $city);
+//fwrite($myfile, "\n");
+//fwrite($myfile, $question);
+fclose($myfile);
 
 //fwrite($fh, "w") or die("Could not write the file");
 //fclose($fh);

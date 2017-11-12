@@ -130,8 +130,8 @@
                 </tr>
                 <br>
 
-                <tr><td></td>
-                    <td><br><textarea name="question" rows="5" cols="37" wrap="hard">What are the questions that made the biggest difference in your life?</textarea></td>
+                <tr>
+                    <td colspan="2" align="right"><br><textarea name="question" rows="5" cols="40" wrap="hard">What are the questions that made the biggest difference in your life?</textarea></td>
                 </tr>        
                 <tr>
                     <td> 
