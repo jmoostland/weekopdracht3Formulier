@@ -37,6 +37,23 @@
 
                 <div id="demo"><h1>Join us</h1></div>
                 <tr>
+
+                <form method='post' action='index.php' enctype='multipart/form-data'>
+                    <td>Select File</td>
+                    <td><input type='file' name='filename' size='5'>
+                </form>
+                </td>
+
+                <?php
+                if ($_FILES) {
+                    $filename = $_FILES['filename']['name'];
+                    move_uploaded_file($_FILES['filename']['tmp_name'], $filename);
+                    echo "Uploaded image '$filename'<br><img src='$filename'>";
+                }
+                ?>
+
+                </tr>
+                <tr>
                     <td>Gender</td>
                     <td><label><input type="radio" name="gender" value="men" required>men</label>
                         <label><input type="radio" name="gender" value="women" required>women</label>
@@ -48,7 +65,7 @@
                 </tr>
                 <tr>
                     <td>Birthday</td>
-                    <td> <input type="date" name="bday" size="35" required><br>
+                    <td> <input type="date" name="bday" size="35" \*required*\><br>
                     </td>
                 </tr>
                 <tr>
