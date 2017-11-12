@@ -13,7 +13,7 @@
                 font-family:Georgia;
                 background-color: #666666;
                 background-image:url("bureau.jpg");
-                background-repeat:no-repeat;
+                background-repeat:repeat-y;
                 background-position:top right, 600px 0px;
                 color: white;
             }
@@ -39,8 +39,8 @@
                 <tr>
 
                 <form method='post' action='index.php' enctype='multipart/form-data'>
-                    <td>Select File</td>
-                    <td><input type='file' name='filename' size='5'>
+                    <td>Select Photo: </td><td><input type='file' name='filename' size='10'>
+                       
                 </form>
                 </td>
 
@@ -90,12 +90,11 @@
                     <td> <input type="text" name="city" size="35"placeholder="Favorite city"><br></td>
                 </tr>
                 <br>
-
                 <tr>
                     <td colspan="2" align="right"><br><textarea name="question" rows="5" cols="40" wrap="hard">What are the questions that made the biggest difference in your life?</textarea></td>
                 </tr>        
                 <tr>
-                    <td> 
+                    </td> 
                     <td><input width="200px" type="image" src="fox.png"></td>
                 </tr>
             </table>

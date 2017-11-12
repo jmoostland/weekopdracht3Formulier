@@ -1,10 +1,10 @@
-2.jpg
+profiel.png
 women
 
-1983-01-01
+
 
 green
-#c89937
+#06f955
 
 What are the questions that made the 
 biggest difference in your life?
